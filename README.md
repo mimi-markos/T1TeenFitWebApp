@@ -9,5 +9,5 @@ In addition, the application features a virtual avatar persona that acts as the 
 
 <strong>Application Demo</strong>
 
-[![Video Title](https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0)](https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0)
+[![T1TeenFit](https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0)](https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0)
 
