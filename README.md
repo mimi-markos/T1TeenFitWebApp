@@ -9,5 +9,5 @@ In addition, the application features a virtual avatar persona that acts as the 
 
 <strong>Application Demo</strong>
 
-[![T1TeenFit](https://www.dropbox.com/s/2tbhzswght7ot7r/WebAppThumbnail.png?dl=0)](https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0)
+[![T1TeenFit](https://www.freepik.com/free-vector/set-young-women-spending-time-together_5351924.htm#query=teen%20sports&position=4&from_view=keyword&track=ais](https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0)
 
