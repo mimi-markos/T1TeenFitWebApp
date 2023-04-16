@@ -1,0 +1,46 @@
+﻿@model ActivityLog
+
+<!-- activity log form fields -->
+<div class="form-group py-2">
+    <label asp-for="ActivityDate" class="control-label">Activity Date</label>
+    <input asp-for="ActivityDate" class="form-control" type="date" />
+    <span asp-validation-for="ActivityDate" class="text-danger"></span>
+</div>
+
+<div class="form-group py-2">
+    <label asp-for="Duration" class="control-label">Duration (minutes)</label>
+    <span data-toggle="tooltip" data-placement="right" title="Enter the total duration of your activity in minutes">
+        <i class="bi bi-info-circle-fill"></i>
+    </span>
+    <input asp-for="Duration" class="form-control" type="number"/>
+    <span asp-validation-for="Duration" class="text-danger"></span>
+</div>
+
+<div class="form-group py-2">
+    <label asp-for="GlucoseBeforeActivity" class="control-label">Glucose Before Activity (mmol/L)</label>
+    <span data-toggle="tooltip" data-placement="right" title="Enter your glucose reading before starting your activity">
+        <i class="bi bi-info-circle-fill"></i>
+    </span>
+    <input asp-for="GlucoseBeforeActivity" class="form-control" type="number" step="0.1"/>
+    <span asp-validation-for="GlucoseBeforeActivity" class="text-danger"></span>
+    
+</div>
+
+<div class="form-group py-2">
+    <label asp-for="GlucoseAfterActivity" class="control-label">Glucose After Activity (mmol/L)</label>
+    <span data-toggle="tooltip" data-placement="right" title="Enter your glucose reading after completing your activity">
+        <i class="bi bi-info-circle-fill"></i>
+    </span>
+    <input asp-for="GlucoseAfterActivity" class="form-control" type="number" step="0.1"/>
+    <span asp-validation-for="GlucoseAfterActivity" class="text-danger"></span>
+</div>
+
+<div class="form-group py-2">
+    <label asp-for="ActivityNotes" class="control-label">Activity Notes</label>
+    <textarea rows="5" placeholder="How did your activity go?" asp-for="ActivityNotes" class="form-control"></textarea>
+    <span asp-validation-for="ActivityNotes" class="text-danger"></span>
+    <small class="text-muted">Maximum length of 500 characters.</small>
+</div>
+
+
+

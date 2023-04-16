@@ -1,0 +1,156 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+    </ol>
+</nav>
+
+
+<container>
+    <div>
+        <div>
+            <!-- about persona modal -->
+             @if (ViewBag.AboutPersonaMessage != null)
+            {
+                <button type="button" class="btn btn-persona mb-3 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="bi bi-bell"></i> Hi, I'm AvoCoach. Get to know me!
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title text-success" id="exampleModalLabel">AvoCoach</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="@ViewBag.AboutPersonaImageUrl" style="width:400px;height:400px">
+                                <h5 class="py-3">Hello @UserManager.GetUserAsync(User).Result.FirstName! 👋</h5>
+                                <p>@ViewBag.AboutPersonaMessage</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- weekly goal feedback -->
+            <div>
+                @if (ViewBag.WeeklyGoalPersonaMessage != null)
+                {
+                    <button class="btn btn-persona mb-3 me-2 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <i class="bi bi-bell"></i> Your weekly goal update!
+                    </button>
+
+
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header">
+                            <h2 class="offcanvas-title text-success text-center" id="offcanvasScrollingLabel">AvoCoach</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="col-3">
+                                <img src="@ViewBag.WeeklyGoalPersonaImageUrl" style="width:250px;height:250px">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="py-3">Hello @UserManager.GetUserAsync(User).Result.FirstName! 👋</h5>
+                                <p>@ViewBag.WeeklyGoalPersonaMessage</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <h1 class="py-3"><strong>Dashboard</strong></h1>
+
+
+    <div class="row">
+        <div class="col-12 mt-2 mb-5">
+            <a href="@Url.Action("Index", "Profile")"><img src="/images/dashboard/Teen User Profile.png" class="img-fluid img-responsive"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7 py-4">
+            <p class="mx-3"><i>Complete an average of 60 minutes of physical activity daily to meet your weekly goal!</i></p>
+            <canvas id="myChart" style=max-width:600px;max-height:500px;></canvas>
+        </div>
+    <div class="col-5">
+        <div class="row d-flex position-relative">
+            <div class="col py-4">   
+                <a href="@Url.Action("Index", "Activity")"><img src="/images/dashboard/Browse Activities.png" class="img-fluid img-responsive"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col py-3">
+                <a href="@Url.Action("Index", "ActivityLog")"><img src="/images/dashboard/View Activity Logs.png" class="img-fluid img-responsive"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col py-3">
+                <a href="@Url.Action("Index", "Journal")"><img src="/images/dashboard/Add Journal Entry.png" class="img-fluid img-responsive"></a>
+            </div>
+        </div>
+      </div>
+    </div>
+</container>
+
+
+<script type="text/javascript">
+    $(function() { 
+        activityLogsChart();
+    });
+
+    function activityLogsChart() {
+
+        $.get('/TeenUser/Dashboard/GetWeeklyGoalPercentage').done(function(result) {
+            if (result) {
+
+                const data = {
+                    labels: [
+                        'Activity Goal % Achieved',
+                        'Activity % To Achieve Weekly Goal',
+                    ],
+                    datasets: [{
+                        label: 'Weekly Goal',
+                        data: [result.percentageAchieved, result.percentageToAchieve],
+                        backgroundColor: [
+                            'rgb(86, 183, 174)',
+                            'rgb(171, 199, 227)',
+                        ],
+                        hoverOffset: 4
+                    }]
+                };
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+
+                        scales: {
+                            xAxes: [{
+                                gridLines: {
+                                    color: "rgba(0, 0, 0, 0)",
+                                }
+                            }],
+                            yAxes: [{
+                                gridLines: {
+                                    color: "rgba(0, 0, 0, 0)",
+                                }
+                            }]
+                        }
+                          
+                    }
+                });
+            }
+
+        }).fail(function() {
+            alert('Sorry, the activity log chart is not available.');
+        })
+    }
+</script>

@@ -1,0 +1,15 @@
+﻿@{
+    <!-- if exists, return temp data  -->
+    var message = TempData["Alert.Message"] ?? null;
+    var type = TempData["Alert.Type"] ?? null;
+}
+
+<!-- display alert notification -->
+@if (message != null)
+{
+    <div class="alert alert-@type alert-dismissible fade show" role="alert">
+        @message
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        </button>
+    </div>    
+}

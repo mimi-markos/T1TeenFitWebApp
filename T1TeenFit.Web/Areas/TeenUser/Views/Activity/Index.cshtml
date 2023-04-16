@@ -1,0 +1,46 @@
+﻿@model IList<Activity>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+      <li class="breadcrumb-item"><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Activities</li>
+  </ol>
+</nav>
+
+
+<div class="container">
+	<h1>Find your <strong>Activity</strong></h1>
+
+	<!-- search bar -->
+	<form asp-controller="Activity" asp-action="Index" class="d-flex flex-row-reverse">
+		<button class="btn-search" value="Filter" type="submit"> <i class="bi bi-search"></i></button>
+		<input class="search px-3" type="text" placeholder="Search activity name..." id="activityName" name="activityName" value=@ViewBag.searchedActivity>
+
+	</form>
+
+	<div class="row">
+	<!-- activity cards -->
+		@foreach(var activity in Model)
+		{
+			<div class="col-12 col-md-6 col-lg-4 my-3">
+				<div class="card">
+					<img src="@activity.ImageUrl" class="card-img-top"/>
+					<div class="card-body">
+						<h3 class="card-title">@activity.Name</h3>
+
+						<!-- button link to activity details -->
+						<a asp-controller="Activity" asp-action="Details" asp-route-id="@activity.Id" class="btn btn-outline-secondary mr-2">
+							<i class="bi bi-info-square-fill"></i> Learn More
+						</a>
+
+						<!-- button link to add activity log -->
+						<a asp-controller="ActivityLog" asp-action="Create" asp-route-activityId="@activity.Id" class="btn btn-outline-success mr-2">
+							<i class="bi bi-plus-square-fill"></i> Add Activity Log
+                        </a>
+					</div>
+				</div> 
+			</div>
+		}
+	</div>
+</div>

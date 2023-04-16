@@ -1,0 +1,236 @@
+html {
+    font-size: 14px;
+}
+
+.nav-link {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 17px;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+}
+
+.btn-primary-custom {
+    background-color: steelblue;
+    color: white;
+}
+
+.btn-primary-custom:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.btn-nav-register {
+    height: 40px;
+    width: 100%;
+    background-color: steelblue;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.btn-nav-register:hover {
+    background-color: mediumslateblue;
+    outline: none;
+    color: white;
+}
+
+.btn-nav-login {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    color: steelblue;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.btn-nav-login:hover {
+    outline: none;
+    color: mediumslateblue;
+}
+
+.btn-auth {
+    height: 55px;
+    width: 80%;
+    background-color: steelblue;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.btn-auth:hover {
+    background-color: mediumslateblue;
+    outline: none;
+    color: white;
+}
+
+.breadcrumb {
+    background-color: #e5e5e5;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.breadcrumb li {
+    display: inline;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.breadcrumb li a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+    color: steelblue;
+    text-decoration: underline;
+}
+
+.search {
+    height: 40px;
+    width: 20%;
+    border-radius: 10px;
+    outline: none;
+    border: solid rgb(118,134,146);
+    margin-right: -15px;
+    margin-bottom: 10px;
+}
+
+.btn-search {
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: rgb(118,134,146);
+    color: white;
+}
+
+.btn-cancel {
+    height: 40px;
+    width: 20%;
+    background-color: white;
+    color: slategrey;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.btn-cancel:hover {
+    outline-color: slategrey;
+    color: slategrey;
+}
+
+.btn-submit {
+    height: 40px;
+    width: 25%;
+    background-color: lightseagreen;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.btn-submit:hover {
+    outline: solid;
+    color: white;
+    background-color: lightseagreen;
+}
+
+.table-header {
+    color: white;
+    background-color: steelblue;
+}
+
+.table {
+    border-bottom: solid;
+    border-color: steelblue;
+}
+
+.btn-details {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.btn-details:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.bg-activitylog {
+    color: white;
+    background-color: steelblue;
+    opacity: 50%;
+}
+
+.btn-persona {
+    height: 40px;
+    background-color: mediumslateblue;
+    color: white;
+    font-weight: 500;
+    border-radius: 100px;
+    width: 100%;
+    min-width: 25px;
+    max-width: 300px;
+}
+
+.btn-persona:hover {
+    background-color: steelblue;
+    outline: none;
+    color: white;
+}
+
+.btn-teenuser-accounts {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.btn-teenuser-accounts:hover {
+    background-color: lightseagreen;
+    color: white;
+    text-decoration: solid;
+}
+
+/* footer */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}

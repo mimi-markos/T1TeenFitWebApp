@@ -1,0 +1,45 @@
+﻿@model ActivityLog
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "ActivityLog")">My Activity Logs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-header bg-transparent m-lg-2">
+                <h1>Edit <strong>Activity Log</strong></h1>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" class="form-control"/>
+                    
+                    <!-- activity log form inputs -->
+                    <partial name="_FormInputs"/>
+                    
+
+                    <!-- submit and cancel buttons -->
+                    <div class="form-group text-end">
+                        <a class="btn btn-secondary" asp-action="Index" asp-route-id="@Model.Id">Cancel</a>
+                        <input type="submit" value="Save" class="btn btn-submit"/>
+                    </div>
+               </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+       
+           
+            

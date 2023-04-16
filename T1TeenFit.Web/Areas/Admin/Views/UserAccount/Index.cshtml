@@ -1,0 +1,49 @@
+﻿@model IList<ApplicationUser>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Manage Users</li>
+    </ol>
+</nav>
+
+<h1 class="pb-3">Manage <strong>Users</strong></h1>
+
+<div class="dropdown">
+    <button class="btn btn-teenuser-accounts dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort Teen Users
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" asp-controller="UserAccount" asp-action="Index" asp-route-order="first name">By First Name</a></li>
+        <li><a class="dropdown-item" asp-controller="UserAccount" asp-action="Index" asp-route-order="last name">By Last Name</a></li>
+    </ul>
+</div>
+
+
+<!-- Registered Teen Users -->
+<table class="table table-striped">
+    <thead class="thead-dark"> 
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Delete Account</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var teenUser in Model) 
+        {
+            <tr>
+                <td>@teenUser.FirstName</td>
+                <td>@teenUser.LastName</td>
+                <td>@teenUser.Email</td>
+                <td>
+                    <!-- button link to delete registered teen user account -->
+                    <form asp-action="Delete" asp-route-id="@teenUser.Id" method="post">
+                        <button type="submit" value="Delete" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

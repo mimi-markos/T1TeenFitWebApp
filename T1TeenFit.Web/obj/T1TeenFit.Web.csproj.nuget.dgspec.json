@@ -1,0 +1,249 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Web\\T1TeenFit.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj",
+        "projectName": "T1TeenFit.Core",
+        "projectPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj",
+        "packagesPath": "C:\\Users\\weiny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\weiny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.DataAccess\\T1TeenFit.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.DataAccess\\T1TeenFit.DataAccess.csproj",
+        "projectName": "T1TeenFit.DataAccess",
+        "projectPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.DataAccess\\T1TeenFit.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\weiny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\weiny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj": {
+                "projectPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Web\\T1TeenFit.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Web\\T1TeenFit.Web.csproj",
+        "projectName": "T1TeenFit.Web",
+        "projectPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Web\\T1TeenFit.Web.csproj",
+        "packagesPath": "C:\\Users\\weiny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\weiny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj": {
+                "projectPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.Core\\T1TeenFit.Core.csproj"
+              },
+              "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.DataAccess\\T1TeenFit.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\weiny\\Desktop\\QUB Project Web Application\\T1TeenFitWebApplication\\T1TeenFit.DataAccess\\T1TeenFit.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

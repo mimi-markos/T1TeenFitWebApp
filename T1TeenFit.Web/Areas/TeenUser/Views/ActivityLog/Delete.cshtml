@@ -1,0 +1,50 @@
+﻿@model ActivityLog
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "ActivityLog")">My Activity Logs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Delete</li>
+    </ol>
+</nav>
+
+<div class="card p-3">
+    <div class="card-header">
+        <h2 class="my-4">Delete Activity Log</h2>
+    </div>
+	<div class="row p-3">
+		<div class="col-8 pt-3">
+            <dl class="row">
+                <dt class="col-4 py-2">Activity:</dt>
+                <dd class="col-8 py-2">@Model.Activity.Name</dd>
+
+                <dt class="col-4 py-2">Activity Date:</dt>
+                <dd class="col-8 py-2">@Model.ActivityDate.ToShortDateString()</dd>
+                
+                <dt class="col-4 py-2">Duration:</dt>
+                <dd class="col-8 py-2">@Model.Duration minutes</dd>
+
+                <dt class="col-4 py-2 ">Glucose Before Activity:</dt>
+                <dd class="col-8 py-2">@Model.GlucoseBeforeActivity mmol/L</dd>
+
+                <dt class="col-4 py-2">Glucose After Activity:</dt>
+                <dd class="col-8 py-2">@Model.GlucoseAfterActivity mmol/L</dd>
+
+                <dt class="col-4 py-2">Activity Notes:</dt>
+                <dd class="col-8 py-2">@Model.ActivityNotes</dd>
+             </dl>
+		</div>
+        <div class="col-4">
+            <img src="@Model.Activity.ImageUrl" class=img-fluid>
+        </div>
+        <div>
+            <form asp-controller="ActivityLog" asp-action="DeleteConfirmation" typeof="post">
+                <input type="hidden" asp-for="Id" />
+
+                <input type="submit" value="Confirm" class="btn btn-danger" />
+                <a class="btn btn-secondary" asp-controller="ActivityLog" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+	</div>
+</div>
