@@ -9,7 +9,5 @@ In addition, the application features a virtual avatar persona that acts as the 
 
 <strong>Application Demo</strong>
 
-<video controls>
-  <source src="https://www.dropbox.com/home/T1TeenFitDemo?preview=WebApp.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Video Title](https://www.dropbox.com/home/T1TeenFitDemo?preview=WebApp.mp4)](https://www.dropbox.com/home/T1TeenFitDemo?preview=WebApp.mp4)
+
