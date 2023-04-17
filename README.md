@@ -9,7 +9,7 @@ In addition, the application features a virtual avatar persona that acts as the 
 
 <strong>Click on the image below to view a demo of the applicaton!</strong>
 
-[![T1TeenFit] (https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0 {:target="_blank"})(https://img.freepik.com/free-vector/school-sports-team-abstract-concept-illustration-school-children-club-competitive-team-sports-kids-after-school-activity-local-tournament-athletic-exercise_335657-3498.jpg?w=740&t=st=1681689049~exp=1681689649~hmac=a023aa73fd9f337b3bb12c1764dfb688a21fda04729189a725c42)]
+[![T1TeenFit](https://img.freepik.com/free-vector/school-sports-team-abstract-concept-illustration-school-children-club-competitive-team-sports-kids-after-school-activity-local-tournament-athletic-exercise_335657-3498.jpg?w=740&t=st=1681689049~exp=1681689649~hmac=a023aa73fd9f337b3bb12c1764dfb688a21fda04729189a725c42)] (https://www.dropbox.com/s/s1ov2jdsh0d8p90/WebApp.mp4?dl=0 {:target="_blank"})
 
 
 
